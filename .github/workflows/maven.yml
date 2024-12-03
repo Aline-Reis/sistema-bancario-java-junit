@@ -30,10 +30,14 @@ jobs:
       with:
         java-version: '17'
         distribution: 'adopt'
-        #Quarda uma copia das dependências baixadas  ´para não baixar 
+        #Quarda uma copia das dependências baixadas  ´para não baixar toda vez o container 
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    #o pipe (|) permite colocar comandos em multiplas linhas
+      run: |
+       javac --version
+       mvn --version
+       mvn package
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
