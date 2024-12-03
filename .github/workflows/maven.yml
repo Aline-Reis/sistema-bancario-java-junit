@@ -30,7 +30,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'adopt'
-        #Quarda uma copia das dependências baixadas  ´para não baixar toda vez o container 
+        #Guarda uma copia das dependências baixadas  ´para não baixar toda vez o container 
         cache: maven
     - name: Build with Maven
     #o pipe (|) permite colocar comandos em multiplas linhas
